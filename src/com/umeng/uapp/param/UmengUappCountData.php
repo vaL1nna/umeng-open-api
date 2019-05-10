@@ -110,7 +110,7 @@ class UmengUappCountData extends SDKDomain
 			$object = json_decode ( json_encode ( $dailyValueResult ), true );
 			$this->dailyValue = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappCountDataNameValueResult=new UmengUappCountDataNameValue();
 				$UmengUappCountDataNameValueResult->setArrayResult($arrayobject );
 				$this->dailyValue [$i] = $UmengUappCountDataNameValueResult;

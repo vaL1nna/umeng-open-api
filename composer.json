@@ -1,0 +1,18 @@
+{
+    "name": "moyi/umeng-open-api",
+    "description": "友盟数据统计Open-api",
+    "authors": [
+        {
+            "name": "wengxiaotong",
+            "email": "345561446@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "moyi\\example\\" : "src/com/alibaba/china/openapi/example/",
+            "moyi\\client\\" : "src/com/alibaba/openapi/client/",
+            "moyi\\umeng\\" : "src/com/umeng/"
+        }
+    },
+    "require": {}
+}

@@ -82,7 +82,7 @@ class UmengUappGetAppListResult
 			$object = json_decode ( json_encode ( $appInfosResult ), true );
 			$this->appInfos = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappAppInfoDataResult=new UmengUappAppInfoData();
 				$UmengUappAppInfoDataResult->setArrayResult($arrayobject );
 				$this->appInfos [$i] = $UmengUappAppInfoDataResult;

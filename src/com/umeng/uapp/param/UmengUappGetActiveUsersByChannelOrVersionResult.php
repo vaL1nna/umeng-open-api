@@ -41,7 +41,7 @@ class UmengUappGetActiveUsersByChannelOrVersionResult
 			$object = json_decode ( json_encode ( $activeUserInfoResult ), true );
 			$this->activeUserInfo = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappCountDataResult=new UmengUappCountData();
 				$UmengUappCountDataResult->setArrayResult($arrayobject );
 				$this->activeUserInfo [$i] = $UmengUappCountDataResult;

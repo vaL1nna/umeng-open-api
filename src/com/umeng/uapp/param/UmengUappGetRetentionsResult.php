@@ -41,7 +41,7 @@ class UmengUappGetRetentionsResult
 			$object = json_decode ( json_encode ( $retentionInfoResult ), true );
 			$this->retentionInfo = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappRetentionInfoResult=new UmengUappRetentionInfo();
 				$UmengUappRetentionInfoResult->setArrayResult($arrayobject );
 				$this->retentionInfo [$i] = $UmengUappRetentionInfoResult;

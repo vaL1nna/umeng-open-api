@@ -62,7 +62,7 @@ class UmengApptrackGetRegisterAnalysisDataResult
 			$object = json_decode ( json_encode ( $dataResult ), true );
 			$this->data = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengApptrackGetRegisterAnalysisResult=new UmengApptrackGetRegisterAnalysis();
 				$UmengApptrackGetRegisterAnalysisResult->setArrayResult($arrayobject );
 				$this->data [$i] = $UmengApptrackGetRegisterAnalysisResult;

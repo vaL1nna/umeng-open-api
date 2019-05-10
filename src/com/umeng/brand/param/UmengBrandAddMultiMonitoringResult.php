@@ -41,7 +41,7 @@ class UmengBrandAddMultiMonitoringResult
 			$object = json_decode ( json_encode ( $resultResult ), true );
 			$this->result = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengBrandMonitoringResultResult=new UmengBrandMonitoringResult();
 				$UmengBrandMonitoringResultResult->setArrayResult($arrayobject );
 				$this->result [$i] = $UmengBrandMonitoringResultResult;

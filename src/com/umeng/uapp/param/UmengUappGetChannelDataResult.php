@@ -82,7 +82,7 @@ class UmengUappGetChannelDataResult
 			$object = json_decode ( json_encode ( $channelInfosResult ), true );
 			$this->channelInfos = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappChannelInfoResult=new UmengUappChannelInfo();
 				$UmengUappChannelInfoResult->setArrayResult($arrayobject );
 				$this->channelInfos [$i] = $UmengUappChannelInfoResult;

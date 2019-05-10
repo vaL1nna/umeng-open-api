@@ -81,7 +81,7 @@ class UmengUappEventListResult
 			$object = json_decode ( json_encode ( $eventInfoResult ), true );
 			$this->eventInfo = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappEventInfoResult=new UmengUappEventInfo();
 				$UmengUappEventInfoResult->setArrayResult($arrayobject );
 				$this->eventInfo [$i] = $UmengUappEventInfoResult;

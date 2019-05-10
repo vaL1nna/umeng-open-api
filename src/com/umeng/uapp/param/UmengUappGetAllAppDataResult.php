@@ -40,7 +40,7 @@ class UmengUappGetAllAppDataResult
 			$object = json_decode ( json_encode ( $allAppDataResult ), true );
 			$this->allAppData = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappAllAppDataResult=new UmengUappAllAppData();
 				$UmengUappAllAppDataResult->setArrayResult($arrayobject );
 				$this->allAppData [$i] = $UmengUappAllAppDataResult;

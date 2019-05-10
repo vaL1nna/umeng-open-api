@@ -61,7 +61,7 @@ class UmengBrandGetMonitoringCodeListResult
 			$object = json_decode ( json_encode ( $monitoringCodeListResult ), true );
 			$this->monitoringCodeList = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengBrandMonitoringCodeResultResult=new UmengBrandMonitoringCodeResult();
 				$UmengBrandMonitoringCodeResultResult->setArrayResult($arrayobject );
 				$this->monitoringCodeList [$i] = $UmengBrandMonitoringCodeResultResult;

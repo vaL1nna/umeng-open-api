@@ -41,7 +41,7 @@ class UmengUappEventGetDataResult
     		$object = json_decode ( json_encode ( $eventDataResult ), true );
 			$this->eventData = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappDateCountInfoResult=new UmengUappDateCountInfo();
 				$UmengUappDateCountInfoResult->setArrayResult($arrayobject );
 				$this->eventData [$i] = $UmengUappDateCountInfoResult;

@@ -40,7 +40,7 @@ class UmengUappEventParamListResult
 			$object = json_decode ( json_encode ( $paramInfosResult ), true );
 			$this->paramInfos = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappParamInfoResult=new UmengUappParamInfo();
 				$UmengUappParamInfoResult->setArrayResult($arrayobject );
 				$this->paramInfos [$i] = $UmengUappParamInfoResult;

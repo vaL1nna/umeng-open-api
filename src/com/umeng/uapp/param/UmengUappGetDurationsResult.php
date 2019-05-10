@@ -60,7 +60,7 @@ class UmengUappGetDurationsResult
 			$object = json_decode ( json_encode ( $durationInfosResult ), true );
 			$this->durationInfos = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappDurationInfoResult=new UmengUappDurationInfo();
 				$UmengUappDurationInfoResult->setArrayResult($arrayobject );
 				$this->durationInfos [$i] = $UmengUappDurationInfoResult;

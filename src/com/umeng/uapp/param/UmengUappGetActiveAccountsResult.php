@@ -40,7 +40,7 @@ class UmengUappGetActiveAccountsResult
 			$object = json_decode ( json_encode ( $activeAccountInfoResult ), true );
 			$this->activeAccountInfo = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengUappActiveAccountInfoResult=new UmengUappActiveAccountInfo();
 				$UmengUappActiveAccountInfoResult->setArrayResult($arrayobject );
 				$this->activeAccountInfo [$i] = $UmengUappActiveAccountInfoResult;

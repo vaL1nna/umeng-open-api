@@ -174,7 +174,7 @@ class ExampleFamily extends SDKDomain
 			$object = json_decode ( json_encode ( $childrenResult ), true );
 			$this->children = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$ExamplePersonResult = new ExamplePerson ();
 				$ExamplePersonResult->setArrayResult ( $arrayobject );
 				$this->children [$i] = $ExamplePersonResult;
@@ -185,7 +185,7 @@ class ExampleFamily extends SDKDomain
 			$object = json_decode ( json_encode ( $ownedCarsResult ), true );
 			$this->ownedCars = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$ExampleCarResult = new ExampleCar ();
 				$ExampleCarResult->setArrayResult ( $arrayobject );
 				$this->ownedCars [$i] = $ExampleCarResult;

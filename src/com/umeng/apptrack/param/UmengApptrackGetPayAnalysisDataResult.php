@@ -62,7 +62,7 @@ class UmengApptrackGetPayAnalysisDataResult
 			$object = json_decode ( json_encode ( $dataResult ), true );
 			$this->data = array ();
 			for($i = 0; $i < count ( $object ); $i ++) {
-				$arrayobject = new ArrayObject ( $object [$i] );
+				$arrayobject = new \ArrayObject ( $object [$i] );
 				$UmengApptrackGetPayAnalysisResult=new UmengApptrackGetPayAnalysis();
 				$UmengApptrackGetPayAnalysisResult->setArrayResult($arrayobject );
 				$this->data [$i] = $UmengApptrackGetPayAnalysisResult;
