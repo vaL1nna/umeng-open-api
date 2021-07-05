@@ -31,7 +31,7 @@ class UmengUappGetActiveUsersResult
 	public function setStdResult($stdResult)
     {
 		$this->stdResult = $stdResult;
-		if (property_exists ( $this->stdResult, "activeUserInfo" )) {
+		if ($this->stdResult->activeUserInfo) {
     		$activeUserInfoResult=$this->stdResult->{"activeUserInfo"};
     		$object = json_decode ( json_encode ( $activeUserInfoResult ), true );
 			$this->activeUserInfo = array ();

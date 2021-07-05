@@ -32,7 +32,7 @@ class UmengUappGetNewUsersResult
 	public function setStdResult($stdResult)
     {
 		$this->stdResult = $stdResult;
-		if (property_exists ( $this->stdResult, "newUserInfo" )) {
+		if ($this->stdResult->newUserInfo) {
 			$newUserInfoResult=$this->stdResult->{"newUserInfo"};
 			$object = json_decode ( json_encode ( $newUserInfoResult ), true );
 			$this->newUserInfo = array ();

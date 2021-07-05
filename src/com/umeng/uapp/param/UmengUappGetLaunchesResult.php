@@ -32,7 +32,7 @@ class UmengUappGetLaunchesResult
 	public function setStdResult($stdResult) 
     {
 		$this->stdResult = $stdResult;
-		if (property_exists ( $this->stdResult, "launchInfo" )) {
+		if ($this->stdResult->launchInfo) {
 			$launchInfoResult=$this->stdResult->{"launchInfo"};
 			$object = json_decode ( json_encode ( $launchInfoResult ), true );
 			$this->launchInfo = array ();

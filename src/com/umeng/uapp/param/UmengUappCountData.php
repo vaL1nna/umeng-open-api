@@ -127,18 +127,18 @@ class UmengUappCountData extends SDKDomain
 	public function setArrayResult($arrayResult)
     {
         $this->arrayResult = $arrayResult;
-        if (property_exists ( $this->arrayResult, "date" )) {
+        if (isset($this->arrayResult['date'])) {
             $this->date = $arrayResult['date'];
         }
-        if (property_exists ( $this->arrayResult, "dailyValue" )) {
+        if (isset($this->arrayResult['dailyValue'])) {
             $dailyValueResult=$arrayResult['dailyValue'];
             $this->dailyValue = new UmengUappCountDataNameValue();
             $this->dailyValue->setStdResult ( $dailyValueResult);
         }
-        if (property_exists ( $this->arrayResult, "hourValue" )) {
+        if (isset($this->arrayResult['hourValue'])) {
             $this->hourValue = $arrayResult['hourValue'];
         }
-        if (property_exists ( $this->arrayResult, "value" )) {
+        if (isset($this->arrayResult['value'])) {
             $this->value = $arrayResult['value'];
         }
     }  
