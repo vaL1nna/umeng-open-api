@@ -2,7 +2,6 @@
 
 namespace moyi\umeng\uapp\param;
 
-use moyi\client\entity\ByteArray;
 use moyi\client\entity\SDKDomain;
 
 class UmengUappAccountInfo extends SDKDomain

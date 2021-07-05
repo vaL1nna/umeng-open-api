@@ -2,10 +2,6 @@
 
 namespace moyi\umeng\uapp\param;
 
-use moyi\client\entity\SDKDomain;
-use moyi\client\entity\ByteArray;
-use moyi\umeng\uapp\param\UmengUappCountData;
-
 class UmengUappGetNewUsersResult
 {
 
@@ -36,7 +32,7 @@ class UmengUappGetNewUsersResult
 	public function setStdResult($stdResult)
     {
 		$this->stdResult = $stdResult;
-		if (array_key_exists ( "newUserInfo", $this->stdResult )) {
+		if (property_exists ( $this->stdResult, "newUserInfo" )) {
 			$newUserInfoResult=$this->stdResult->{"newUserInfo"};
 			$object = json_decode ( json_encode ( $newUserInfoResult ), true );
 			$this->newUserInfo = array ();

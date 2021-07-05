@@ -3,8 +3,6 @@
 namespace moyi\umeng\uapp\param; 
 
 use moyi\client\entity\SDKDomain;
-use moyi\client\entity\ByteArray;
-use moyi\umeng\uapp\param\UmengUappCountDataNameValue;
 
 class UmengUappCountData extends SDKDomain
 {
@@ -128,20 +126,20 @@ class UmengUappCountData extends SDKDomain
 
 	public function setArrayResult($arrayResult)
     {
-		$this->arrayResult = $arrayResult;
-		if (array_key_exists ( "date", $this->arrayResult )) {
-    		$this->date = $arrayResult['date'];
-    	}
-    	if (array_key_exists ( "dailyValue", $this->arrayResult )) {
-    		$dailyValueResult=$arrayResult['dailyValue'];
-    		$this->dailyValue = new UmengUappCountDataNameValue();
-    		$this->dailyValue->setStdResult ( $dailyValueResult);
-    	}
-    	if (array_key_exists ( "hourValue", $this->arrayResult )) {
-    		$this->hourValue = $arrayResult['hourValue'];
-    	}
-        if (array_key_exists ( "value", $this->arrayResult )) {
-    		$this->value = $arrayResult['value'];
-    	}
+        $this->arrayResult = $arrayResult;
+        if (property_exists ( $this->arrayResult, "date" )) {
+            $this->date = $arrayResult['date'];
+        }
+        if (property_exists ( $this->arrayResult, "dailyValue" )) {
+            $dailyValueResult=$arrayResult['dailyValue'];
+            $this->dailyValue = new UmengUappCountDataNameValue();
+            $this->dailyValue->setStdResult ( $dailyValueResult);
+        }
+        if (property_exists ( $this->arrayResult, "hourValue" )) {
+            $this->hourValue = $arrayResult['hourValue'];
+        }
+        if (property_exists ( $this->arrayResult, "value" )) {
+            $this->value = $arrayResult['value'];
+        }
     }  
 }

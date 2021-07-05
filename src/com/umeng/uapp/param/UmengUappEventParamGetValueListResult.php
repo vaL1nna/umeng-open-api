@@ -1,10 +1,6 @@
 <?php
 
-namespace moyi\umeng\uapp\param; 
-
-use moyi\client\entity\SDKDomain;
-use moyi\client\entity\ByteArray;
-use moyi\umeng\uapp\param\UmengUappParamValueInfo;
+namespace moyi\umeng\uapp\param;
 
 class UmengUappEventParamGetValueListResult
 {
